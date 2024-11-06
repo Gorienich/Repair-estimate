@@ -1806,19 +1806,7 @@ class TCPDF_STATIC {
 	 * @public static
 	 */
 
-	 public static function fopenLocal($filename, $mode) {
-    // Check if the path is a local path and not a URL
-    if (strpos($filename, '://') === false) {
-        // The filename is already a local path, so just return the fopen without adding file://
-        return fopen($filename, $mode);
-    } else {
-        // If it's a URL or remote file, handle accordingly (you can return false or some other logic)
-        return false;
-    }
-}
-
-	/* no local host */
-	/*
+	
 	 public static function fopenLocal($filename, $mode) {
 		if (strpos($filename, '://') === false) {
 			$filename = 'file://'.$filename;
@@ -1827,7 +1815,6 @@ class TCPDF_STATIC {
 		}
 		return fopen($filename, $mode);
 	}
-*/
 	/**
 	 * Check if the URL exist.
 	 * @param string $url URL to check.
